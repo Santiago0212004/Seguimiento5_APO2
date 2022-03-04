@@ -5,11 +5,11 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="127.0" prefWidth="218.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="169.0" prefWidth="218.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField layoutX="35.0" layoutY="57.0" />
-      <Label layoutX="65.0" layoutY="27.0" text="Ingrese el monto" />
-      <Button layoutX="86.0" layoutY="88.0" mnemonicParsing="false" text="Enviar" />
+      <TextField fx:id="incomeTF" layoutX="14.0" layoutY="85.0" />
+      <Label layoutX="17.0" layoutY="60.0" text="Monto" />
+      <Button fx:id="submitBTM" layoutX="18.0" layoutY="123.0" mnemonicParsing="false" onAction="#submit" text="Enviar" />
+      <Label layoutX="14.0" layoutY="14.0" text="Añadir Ingreso" />
    </children>
 </AnchorPane>

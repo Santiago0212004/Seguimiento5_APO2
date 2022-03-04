@@ -1,42 +1,23 @@
 package main;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.IOException;
+
+import control.Ventana1;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class Main {
 
-	public static void main(String[] args) {
-		Date now = new Date();
-		System.out.println(now);
-		
-		long uts = now.getTime();
-		System.out.println(uts);
-		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		String nowStr = sdf.format(now);
-		System.out.println(nowStr);
-		
-		String initDate =  "2022-01-17";
-		String finalDate = "2022-06-03";
-		
-		
-		
-		try {
-			Date f1 = sdf.parse(initDate);
-			Date f2 = sdf.parse(finalDate);
-			
-			if(now.getTime()>f1.getTime() && now.getTime()<f2.getTime()) {
-				System.out.println("Está dentro de las fechas");
-			}
-			else {
-				System.out.println("No está dentro de las fechas");
-			}
-			
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public static void main(String[] args) throws IOException {
+		FXMLLoader loader = new FXMLLoader(Main.class.getResource("../ui/Ventana1.fxml"));
+		loader.setController(new Ventana1());
+		Parent parent = (Parent) loader.load();
+		Stage stage = new Stage();
+		Scene scene = new Scene(parent);
+		stage.setScene(scene);
+		stage.show();
 		
 	}
 
